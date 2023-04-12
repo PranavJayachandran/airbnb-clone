@@ -30,6 +30,7 @@ public class RoomController : ControllerBase
     public IActionResult ToggleLike(int id)
     {
         RoomService.ToggleLike(id);
+        Console.Write(id);
         return NoContent();
     }
 }

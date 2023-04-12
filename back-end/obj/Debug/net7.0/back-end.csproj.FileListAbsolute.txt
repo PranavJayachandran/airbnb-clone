@@ -31,3 +31,9 @@ C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-
 C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\obj\Debug\net7.0\back-end.pdb
 C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\obj\Debug\net7.0\back-end.genruntimeconfig.cache
 C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\obj\Debug\net7.0\ref\back-end.dll
+C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\bin\Debug\net7.0\System.Web.Cors.dll
+C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\bin\Debug\net7.0\System.Web.Http.Cors.dll
+C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\pranavj\Desktop\learn angular\hotel_inventory_app\allinone_airbnb\back-end\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

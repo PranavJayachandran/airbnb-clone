@@ -11,7 +11,7 @@ export class AreaComponent {
   @Input() area: Area | undefined;
   toggleLike(liked: boolean | undefined): void {
     this.area = { ...this.area, liked: !liked };
-    console.log(liked, this.area?.liked);
+    if (this.area.id !== undefined) this.areaService.toggleLike(this.area.id);
   }
   constructor(private areaService: AreaService) {}
 

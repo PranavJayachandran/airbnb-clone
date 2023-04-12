@@ -12,10 +12,12 @@ export class AreasComponent {
   constructor(private areaService: AreaService) {}
 
   ngOnInit(): void {
+    console.log('Calling');
     this.getAreas();
   }
 
   getAreas(): void {
     this.areaService.getAreas().subscribe((areas) => (this.areas = areas));
+    console.log(this.areas);
   }
 }

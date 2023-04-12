@@ -1,26 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Area } from 'area';
-import { Areas } from 'mock_areas';
+// import { Areas } from 'mock_areas';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AreaService {
-  constructor() {}
+  areas: Area[] = [];
+  area: Area[] = [];
+  p: number = 0;
+  constructor(private http: HttpClient) {}
 
   getAreas(): Observable<Area[]> {
-    const areas = of(Areas);
-    return areas;
+    return this.http.get<Area[]>('http://localhost:5252/Room');
   }
   getArea(id: number): Observable<Area> {
-    const area = Areas.find((a) => a.id === id)!;
-    return of(area);
+    return this.http.get<Area>(`http://localhost:5252/Room/${id}`);
   }
 
   toggleLike(id: number): void {
-    for (let i = 0; i < Areas.length; i++) {
-      if (Areas[i].id === id) Areas[i].liked = !Areas[i].liked;
-    }
+    // for (let i = 0; i < Areas.length; i++) {
+    //   if (Areas[i].id === id) Areas[i].liked = !Areas[i].liked;
+    // }
+    const body = { title: 'Angular PUT Request Example' };
+    this.http
+      .put(`http://localhost:5252/Room/${id}`, body)
+      .subscribe((data) => {
+        console.log(data);
+      });
+    console.log('Called');
   }
 }

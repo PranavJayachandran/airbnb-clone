@@ -7,12 +7,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AreasComponent } from './areas/areas.component';
 import { AreaComponent } from './area/area.component';
 import { NgIconsModule } from '@ng-icons/core';
-import { heroStarSolid, heroHeartSolid } from '@ng-icons/heroicons/solid';
+import {
+  heroStarSolid,
+  heroHeartSolid,
+  heroUserSolid,
+} from '@ng-icons/heroicons/solid';
 import {
   heroShare,
   heroHeart,
   heroPhoto,
   heroWifi,
+  heroChevronLeft,
+  heroBars4,
+  heroGlobeAlt,
 } from '@ng-icons/heroicons/outline';
 import { RoomsComponent } from './rooms/rooms.component';
 import { OfferingComponent } from './offering/offering.component';
@@ -22,6 +29,9 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { PayoutComponent } from './payout/payout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PlacingRequestComponent } from './placing-request/placing-request.component';
+import { FinalPriceDisplayComponent } from './final-price-display/final-price-display.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +42,8 @@ import { PayoutComponent } from './payout/payout.component';
     OfferingComponent,
     CalenderComponent,
     PayoutComponent,
+    PlacingRequestComponent,
+    FinalPriceDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +55,10 @@ import { PayoutComponent } from './payout/payout.component';
       heroHeart,
       heroPhoto,
       heroWifi,
+      heroChevronLeft,
+      heroBars4,
+      heroUserSolid,
+      heroGlobeAlt,
     }),
     CalendarModule,
     CalendarModule.forRoot({
@@ -51,6 +67,7 @@ import { PayoutComponent } from './payout/payout.component';
     }),
     BrowserAnimationsModule,
     MatNativeDateModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

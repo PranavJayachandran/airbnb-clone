@@ -12,9 +12,8 @@ export class RoomsComponent {
   area: Area | undefined;
   constructor(
     private route: ActivatedRoute,
-    private areaService: AreaService
-  ) // private location: Location
-  {}
+    private areaService: AreaService // private location: Location
+  ) {}
   ngOnInit(): void {
     this.getArea();
   }
@@ -22,6 +21,5 @@ export class RoomsComponent {
   getArea(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.areaService.getArea(id).subscribe((area) => (this.area = area));
-    console.log(this.area);
   }
 }

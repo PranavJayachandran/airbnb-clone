@@ -1,10 +1,10 @@
 <div class="flex mb-10" *ngIf="area">
   <div>
     <a routerLink="/room/{{ area.id }}">
-      <img [src]="area.image" class="h-[280px] w-80 rounded-xl" />
+      <img [src]="area.image" class="h-[290px] w-[320px] rounded-xl" />
     </a>
     <div
-      class="relative -top-[260px] left-[280px] cursor-pointer"
+      class="relative -top-[260px] left-[260px] cursor-pointer"
       (click)="toggleLike(area.liked)"
     >
       <ng-icon

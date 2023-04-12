@@ -43,9 +43,10 @@
           <div class="mt-6 text-2xl font-semibold mb-2">
             What this place offers
           </div>
-          <div *ngFor="let offering of area?.offerings" class="flex flex-col">
+          <!-- <div *ngFor="let offering of area?.offerings" class="flex flex-col">
             <app-offering [offering]="offering"></app-offering>
-          </div>
+          </div> -->
+          <div class="text-lg">{{ area?.offering_name }}</div>
         </div>
         <div class="mt-8 text-lg border-b-2 pb-6">
           <div class="flex text-3xl font-semibold text-[#ff385c] mb-4">
@@ -70,7 +71,7 @@
         </div>
       </div>
       <div class="w-4/12">
-        <app-payout></app-payout>
+        <app-payout [price]="area?.price"></app-payout>
       </div>
     </div>
   </div>

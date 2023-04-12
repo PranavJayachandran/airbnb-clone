@@ -12,7 +12,7 @@ export interface Area {
   bathrooms?: number;
   host?: string;
   hostimage?: string;
-  offerings?: offering[];
+  offering_name?: string;
 }
 
 export interface offering {

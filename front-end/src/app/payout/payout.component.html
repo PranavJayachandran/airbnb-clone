@@ -2,7 +2,10 @@
   <div class="border rounded-lg py-4 px-8">
     <div class="flex justify-between">
       <div class="text-lg">
-        <span class="text-xl font-semibold">1,894</span> night
+        <span class="text-xl font-semibold">{{
+          price | number : "1.0-0"
+        }}</span>
+        night
       </div>
       <div class="text-gray-600 underline">1 review</div>
     </div>
@@ -20,18 +23,21 @@
       <div class="text-xs font-semibold">Guests</div>
       <div>2 guests</div>
     </div>
-
-    <div
-      class="mt-2 rounded-xl bg-[#ff385c] text-white py-4 flex justify-center text-[20px]"
-    >
-      Reserve
-    </div>
+    <a [routerLink]="['/placing_request']" [state]="{ price: price }">
+      <div
+        class="mt-2 rounded-xl bg-[#ff385c] text-white py-4 flex justify-center text-[20px]"
+      >
+        Reserve
+      </div>
+    </a>
     <div class="text-center mt-2 text-gray-600">You won't be charged yet</div>
 
     <div class="mt-4 flex flex-col gap-4">
       <div class="flex justify-between text-[17px]">
-        <div class="underline">1,894 x 19 nights</div>
-        <div>37,100</div>
+        <div class="underline">{{ price | number : "1.0-0" }} x 19 nights</div>
+        <div>
+          {{ price != undefined ? (price * 19 | number : "1.0-0") : price }}
+        </div>
       </div>
       <div class="flex justify-between text-[17px]">
         <div class="">Weekly stay discount</div>
@@ -43,7 +49,13 @@
       </div>
       <div class="mt-2 pt-4 border-t-2 flex justify-between text-[17px]">
         <div class="text-xl font-semibold">Total</div>
-        <div>41,068</div>
+        <div>
+          {{
+            price != undefined
+              ? (price * 19 + 5081 - 1113 | number : "1.0-0")
+              : price
+          }}
+        </div>
       </div>
     </div>
   </div>

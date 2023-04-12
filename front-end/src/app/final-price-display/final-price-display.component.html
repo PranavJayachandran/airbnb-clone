@@ -1,0 +1,51 @@
+<div class="w-full h-full flex justify-center items-center">
+  <div class="border rounded-xl py-6">
+    <div class="mx-4 border-b-2">
+      <div class="flex gap-2 pl-2 pr-24 pb-4">
+        <div>
+          <img
+            src="https://a0.muscache.com/im/pictures/d35b1dc9-2810-407a-b78e-c22ccfb6a019.jpg?aki_policy=large"
+            class="h-28 w-32 rounded-xl"
+          />
+        </div>
+        <div class="justify-between flex flex-col">
+          <div class="">
+            <div class="font-light">Private room in farm stay</div>
+            <div>Chaitanya welness center</div>
+          </div>
+          <div>5.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="border-b-2 mx-4">
+      <div class="py-4 pl-2 pr-24 text-[15px]">
+        Your booking is protected by
+        <span class="text-[#ff385c] font-bold">air</span
+        ><span class="font-bold">cover</span>
+      </div>
+    </div>
+    <div class="border-b-2 mx-4 pb-8">
+      <div class="pt-4 flex flex-col gap-4">
+        <div class="text-xl font-semibold">Price Details</div>
+        <div class="font-light flex justify-between text-[15px]">
+          <div>{{ price | number }} x 5 nights</div>
+          <div>{{ price != undefined ? (price * 5 | number) : price }}</div>
+        </div>
+        <div class="font-light flex justify-between text-[15px]">
+          <div class="underline">Airbnb service fee</div>
+          <div>1,397.65</div>
+        </div>
+        <div class="font-light flex justify-between text-[15px]">
+          <div class="underline">Taxes</div>
+          <div>1,188</div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-4 pt-2 font-bold mt-4 flex justify-between text-[15px]">
+      <div>Total(INR)</div>
+      <div>
+        {{ price != undefined ? (price * 5 + 1188 + 1397.65 | number) : price }}
+      </div>
+    </div>
+  </div>
+</div>
