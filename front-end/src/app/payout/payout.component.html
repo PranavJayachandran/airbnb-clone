@@ -9,21 +9,64 @@
       </div>
       <div class="text-gray-600 underline">1 review</div>
     </div>
-    <div class="mt-6 border border-gray-300 rounded-t-lg flex px-2">
-      <div class="flex-1 border-r border-gray-500 py-2">
-        <div class="text-xs font-semibold">CHECK-IN</div>
-        <div>4/10/2023</div>
+    <div class="mt-6 border border-b-0 border-gray-300 rounded-t-lg flex px-2">
+      <div class="flex-1 border-gray-500">
+        <mat-form-field class="w-40 mx-2 mt-2">
+          <mat-label class="text-xs">Check In</mat-label>
+          <input matInput [matDatepicker]="CheckIn" />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="CheckIn"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #CheckIn>
+            <mat-datepicker-actions>
+              <button
+                mat-raised-button
+                class="bg-[#ff385c] px-2 rounded-xl py-1 text-white transition hover:bg-white hover:text-[#ff385c]"
+                matDatepickerApply
+              >
+                Apply
+              </button>
+              <button mat-button matDatepickerCancel class="ml-4 mr-2">
+                Cancel
+              </button>
+            </mat-datepicker-actions>
+          </mat-datepicker>
+        </mat-form-field>
       </div>
       <div class="flex-1 py-2 px-2">
-        <div class="text-xs font-semibold">CHECK-OUT</div>
-        <div>4/10/2023</div>
+        <mat-form-field appearance="fill" class="w-44">
+          <mat-label class="text-xs">Check Out</mat-label>
+          <input matInput [matDatepicker]="CheckOut" />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="CheckOut"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #CheckOut>
+            <mat-datepicker-actions>
+              <button
+                mat-raised-button
+                class="bg-[#ff385c] px-2 rounded-xl py-1 text-white transition hover:bg-white hover:text-[#ff385c]"
+                matDatepickerApply
+              >
+                Apply
+              </button>
+              <button mat-button matDatepickerCancel class="ml-4 mr-2">
+                Cancel
+              </button>
+            </mat-datepicker-actions>
+          </mat-datepicker>
+        </mat-form-field>
       </div>
     </div>
-    <div class="border rounded-b-lg p-2 border-gray-300">
+    <div class="border -mt-4 rounded-b-lg p-2 border-gray-300">
       <div class="text-xs font-semibold">Guests</div>
       <div>2 guests</div>
     </div>
-    <a [routerLink]="['/placing_request']" [state]="{ price: price }">
+    <a
+      [routerLink]="['/placing_request']"
+      [state]="{ price: price, image: image, name: room_name, host: host_name }"
+    >
       <div
         class="mt-2 rounded-xl bg-[#ff385c] text-white py-4 flex justify-center text-[20px]"
       >

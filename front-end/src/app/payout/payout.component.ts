@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PayoutComponent {
   @Input() price: number | undefined;
+  @Input() image: string | undefined;
+  @Input() room_name: string | undefined;
+  @Input() host_name: string | undefined;
 }

@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class FinalPriceDisplayComponent {
   @Input() price: number | undefined;
+  @Input() image: string | undefined;
+  @Input() name: string | undefined;
+  @Input() host: string | undefined;
 }

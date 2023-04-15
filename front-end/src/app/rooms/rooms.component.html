@@ -71,7 +71,12 @@
         </div>
       </div>
       <div class="w-4/12">
-        <app-payout [price]="area?.price"></app-payout>
+        <app-payout
+          [price]="area?.price"
+          [image]="area?.image"
+          [room_name]="area?.name"
+          [host_name]="area?.host"
+        ></app-payout>
       </div>
     </div>
   </div>

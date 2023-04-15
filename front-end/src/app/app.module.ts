@@ -32,6 +32,10 @@ import { PayoutComponent } from './payout/payout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlacingRequestComponent } from './placing-request/placing-request.component';
 import { FinalPriceDisplayComponent } from './final-price-display/final-price-display.component';
+import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +72,9 @@ import { FinalPriceDisplayComponent } from './final-price-display/final-price-di
     BrowserAnimationsModule,
     MatNativeDateModule,
     HttpClientModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

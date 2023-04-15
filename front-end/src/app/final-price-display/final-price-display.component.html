@@ -3,15 +3,12 @@
     <div class="mx-4 border-b-2">
       <div class="flex gap-2 pl-2 pr-24 pb-4">
         <div>
-          <img
-            src="https://a0.muscache.com/im/pictures/d35b1dc9-2810-407a-b78e-c22ccfb6a019.jpg?aki_policy=large"
-            class="h-28 w-32 rounded-xl"
-          />
+          <img [src]="image" class="h-28 w-32 rounded-xl" />
         </div>
         <div class="justify-between flex flex-col">
           <div class="">
-            <div class="font-light">Private room in farm stay</div>
-            <div>Chaitanya welness center</div>
+            <div class="font-light">{{ name }}</div>
+            <div>Hosted By {{ host }}</div>
           </div>
           <div>5.00</div>
         </div>
